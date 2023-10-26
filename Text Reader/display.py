@@ -127,10 +127,12 @@ def translate_text():
         traduction = translator.translate(text_block, dest='en').text
     elif language_to_translate == 'Spanish':
         traduction = translator.translate(text_block, dest='es').text
-    elif language_to_translate == 'Francais':
+    elif language_to_translate == 'French':
         traduction = translator.translate(text_block, dest='fr').text
     elif language_to_translate == 'Rusian':
         traduction = translator.translate(text_block, dest='ru').text
+    elif language_to_translate == 'German':
+        traduction = translator.translate(text_block, dest='de').text
     else:
         traduction = translator.translate(text_block, dest='es').text
 
@@ -240,7 +242,7 @@ text_name_entry = tk.Entry(menu_frame, font = ('Times', '10', 'bold'))
 text_name_entry.place(x = 890, y = 20)
 
 #Lists
-translation_languages_list = Combobox(menu_frame, values = ['English', 'Spanish', 'Francais', 'Rusian'])
+translation_languages_list = Combobox(menu_frame, values = ['English', 'Spanish', 'French', 'Rusian', 'German'])
 translation_languages_list.place(x = 1100, y = 20)
 
 texts_list = Combobox(menu_frame, values = Select_Text_Names())
